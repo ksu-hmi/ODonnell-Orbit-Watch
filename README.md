@@ -1,6 +1,6 @@
 # ODonnell-Orbit-Watch 
 Orbit is a smartwatch designed specifically to help children and adults with ADHD manage their time and tasks effectively. The watch works through a series of customizable, parent-programmed alerts and reminders that help guide users through their daily routines. This software would be accessible via a companion mobile app, where users or caregivers can set up schedules, assign tasks, and configure reminders in a way that best suits their needs. 
-Intended functions:\n
+Intended functions:
 Customizable Alerts & Reminders – Users can schedule task reminders, such as homework time, brushing teeth, or getting ready for school, through a mobile app. 
   Vibrational & Visual Cues – Instead of relying on sound-based notifications (which can be distracting in class or work), the watch uses vibrations and visual cues to notify the user. 
   Routine Management – Create detailed schedules, including morning and evening routines, with specific timed blocks for each task (e.g., Wake Up, Eat, Brush Teeth, Get   Dressed, etc.). 
