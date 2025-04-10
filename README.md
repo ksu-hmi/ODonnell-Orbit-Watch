@@ -33,4 +33,4 @@ Orbit is a smartwatch designed specifically to help children and adults with ADH
 
 - **Offline Mode:**
 
-# This is a work in progress, some components may not be fully functional. This is a project for KSU MSHMI Spring 2025.
+This is a work in progress, some components may not be fully functional. This is a project for KSU MSHMI Spring 2025.
