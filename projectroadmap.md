@@ -22,6 +22,9 @@ Keep any existing copyright, patent, or attribution notices.
 
 #Tanya notes - this is in Python 2 and required modifications to run in Python 3. Does not connect to the youtube videos as the code states. When you set the alarm, it notes the time every one minute in the terminal. 
 
+#https://github.com/Pmogi/Alarm-Clock.git
+#Tanya notes - This one works! And it comes with a jaunty little ditty. 
+
 [ ]Option to add alarms 
 
 [ ]Option to add countdown alarms 
@@ -49,6 +52,9 @@ Time allotted for each task
 No Snooze but will repeat alarm if not completed on the watch 
 
 # Timers 
+#https://github.com/vikdevelop/timer.git
+#Tanya notes - does not work in windows, only on linux devices
+
 
 [ ]From App 
 
