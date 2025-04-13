@@ -18,6 +18,10 @@ If you modify the code, add a note like:
 **Preserve Notices**
 Keep any existing copyright, patent, or attribution notices.
 
+#https://github.com/Pmogi/Alarm-Clock.git
+
+#Tanya notes - this is in Python 2 and required modifications to run in Python 3. Does not connect to the youtube videos as the code states. When you set the alarm, it notes the time every one minute in the terminal. 
+
 [ ]Option to add alarms 
 
 [ ]Option to add countdown alarms 
