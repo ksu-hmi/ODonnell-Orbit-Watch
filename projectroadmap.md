@@ -68,6 +68,8 @@ Touch/type function?
 
 #https://github.com/AMaheshVardhan/Pomodoro-Timer
 
+#Tanya - runs okay. If you click on Start a second time instead of Reset, the timer starts flipping between work and break without stopping. Resetting the timer at this point does not help. You have to close out of it and start it all over again. 
+
 
 # App 
 
