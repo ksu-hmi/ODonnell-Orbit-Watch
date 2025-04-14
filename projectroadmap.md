@@ -44,6 +44,9 @@ Time allotted for each task
 Evening routine 
 
 Individual tasks 
+#https://github.com/cyph3rryx/Python-Reminder-Script
+
+#Kayla Notes: Start Reminder is an audio message " Here are your tasks for the Day". A good start for a Daily Task Function. Currently unable to add tasks within the program, but we might need to add a "get user input" modification or an append option. 
 
 Time allotted for each task 
 
