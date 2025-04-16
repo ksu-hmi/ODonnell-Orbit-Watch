@@ -44,6 +44,7 @@ Orbit Watch works through customizable, caregiver or user-set, reminders,timers,
   - Quick-call or message alerts to caregivers in case the user needs assistance.
 
 - **Offline Mode:**
+  - Works without requiring a constant internet connection, reducing distractions and increasing reliability.
 
 ## How to Run the Code
 

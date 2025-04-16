@@ -29,6 +29,10 @@ Keep any existing copyright, patent, or attribution notices.
 
 [ ]Option to add countdown alarms 
 
+https://github.com/Jamandalley/AlarmApp
+
+#Elizabeth notes - Parts of the code are functional, but its trajectory doesn’t quite align with the Orbit watch’s path. It’s buggy. It overall does not  deliver on audio notifications and I couldn’t get the font customization to work either.  It does however count down briefly before it freezes. 
+
 [ ]Schedule for future dates 
 
 [ ]Recurring alarms 
@@ -44,6 +48,9 @@ Time allotted for each task
 Evening routine 
 
 Individual tasks 
+#https://github.com/cyph3rryx/Python-Reminder-Script
+
+#Kayla Notes: Start Reminder is an audio message " Here are your tasks for the Day". A good start for a Daily Task Function. Currently unable to add tasks within the program, but we might need to add a "get user input" modification or an append option. 
 
 Time allotted for each task 
 
@@ -55,12 +62,15 @@ No Snooze but will repeat alarm if not completed on the watch
 #https://github.com/vikdevelop/timer.git
 #Tanya notes - does not work in windows, only on linux devices
 
-
 [ ]From App 
 
 [ ]Set timers for specific tasks 
 
 # Program timers for specific tasks 
+
+https://github.com/Aoumjahde/Advanced-To-Do-List-App-with-Python-and-Tkinter
+
+#Elizabeth - For the sake of our project, it seems to have too many windows pop up, creating to much visual clutter for our end user. However, it shouldn’t be discarded as it could help with the app development. One thing I really liked was the ability to edit a list while creating it, and I also appreciated the flexibility of being able to add multiple lists. 
 
 # Easy task selection list 
 
