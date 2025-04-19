@@ -31,7 +31,7 @@ Keep any existing copyright, patent, or attribution notices.
 
 https://github.com/Jamandalley/AlarmApp
 
-#Elizabeth notes - Parts of the code are functional, but its trajectory doesn’t quite align with the Orbit watch’s path. It’s buggy. It overall does not  deliver on audio notifications and I couldn’t get the font customization to work either.  It does however count down briefly before it freezes. 
+#Elizabeth notes - Parts of the code are functional, but its trajectory doesn’t quite align with the Orbit watch’s path. It’s buggy. It overall does not  deliver on audio notifications and I couldn’t get the font customization to work either.  It does however count down briefly before it freezes.  
 
 [ ]Schedule for future dates 
 
