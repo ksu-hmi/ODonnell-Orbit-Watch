@@ -62,6 +62,10 @@ No Snooze but will repeat alarm if not completed on the watch
 #https://github.com/vikdevelop/timer.git
 #Tanya notes - does not work in windows, only on linux devices
 
+#https://github.com/glyph/Pomodouroboros
+
+#Amanda's Notes: This is a continuous Pomodoro timer that helps with time blindness.
+
 [ ]From App 
 
 [ ]Set timers for specific tasks 
