@@ -12,7 +12,7 @@ Orbit is a smartwatch designed specifically to help children and adults with ADH
 7. [Licenses & Acknowledgements](#licenses--acknowledgements)
 
 ## About the Project
-Orbit Watch works through customizable, caregiver or user-set, reminders,timers, and reinforcement to guide ADHD users through structured routines. Visual and tactile cues reduce dependence on sound-based alerts and create a low-disruption experience, especially in classroom or work settings. 
+Orbit Watch works through customizable, caregiver or user-set, reminders, timers, and reinforcement to guide ADHD users through structured routines. Visual and tactile cues reduce dependence on sound-based alerts and create a low-disruption experience, especially in classroom or work settings. 
 
 ## Intended functions
 
