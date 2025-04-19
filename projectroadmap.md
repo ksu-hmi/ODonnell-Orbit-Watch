@@ -104,3 +104,5 @@ Push to watch
 Needs bluetooth capability 
 
 User Interface to display tasks and alerts, show timer countdown # Amanda's comments https://github.com/sbartoszuk/A-to-D
+
+#Amanda's Notes: It is a GUI built with PyQt5 which could require additional effort to ensure compatibility across platforms, especially when adapting it for the smartwatch integration. It appears to have minimal documentation and lacks a significant user community. This can make it challenging to understand the codebase and troubleshoot issues without external assistance. 
