@@ -102,3 +102,5 @@ Assign a designated amount of time the small task should take
 Push to watch 
 
 Needs bluetooth capability 
+
+User Interface to display tasks and alerts, show timer countdown # Amanda's comments https://github.com/sbartoszuk/A-to-D
