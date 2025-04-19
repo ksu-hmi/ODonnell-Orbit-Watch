@@ -63,6 +63,7 @@ No Snooze but will repeat alarm if not completed on the watch
 #Tanya notes - does not work in windows, only on linux devices
 
 #https://github.com/glyph/Pomodouroboros #Amanda's Notes: This is a continuous Pomodoro timer that helps with time blindness.
+#Amanda's Notes: Currently only runs on Mac, does not run on Windows or Linux but future plans to do so but no timeline. Has a rough implementation, it may not be suitable for end-users without further development. The codebase might require significant refinement and testing.
 
 [ ]From App 
 
