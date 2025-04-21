@@ -42,9 +42,14 @@ https://github.com/Jamandalley/AlarmApp
 Morning routine 
 
 Individual tasks 
+#https://github.com/cyph3rryx/Python-Reminder-Script
+#Elizabeth Notes: AI would get stuck on second task, updated the code with guidance from https://stackoverflow.com/questions/56032027/pyttsx3-runandwait-method-gets-stuck
+#Elizabeth Notes: Was unable to make changes to a task list once it was done or with accidental entry, added funtion to remove last item and added button between clear tasks and start reminder. This made the list more user friendly. Would like to further explore code to remove selected task.
 
 Time allotted for each task 
+#https://github.com/cyph3rryx/Python-Reminder-Script
 
+#Elizabeth Notes: currently allows interval reminders, was previously set at 3600sec, for the purpose of testing, it was reduced to 1 second. 
 Evening routine 
 
 Individual tasks 
