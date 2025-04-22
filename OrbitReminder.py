@@ -35,7 +35,7 @@ def remind():
 #enter to commit task to listbox
 
 def say_words(task):
-    #EDrunAndWait() not fully working as it would get stuck on second thing said, used https://stackoverflow.com/questions/56032027/pyttsx3-runandwait-method-gets-stuck
+    #Elizabeth Notes: runAndWait() not fully working as it would get stuck on second thing said, used https://stackoverflow.com/questions/56032027/pyttsx3-runandwait-method-gets-stuck
     engine = pyttsx3.init()
     engine.say(task)
     engine.runAndWait()
@@ -61,6 +61,12 @@ def add_task():
 def clear_tasks():
     tasks.clear()
     task_list.delete(0, tk.END)
+
+def delete_selection():
+    #delete from Listbox
+    selection = task_list.curselection()
+    task_list.delete(selection)
+    tasks.pop(selection[0])  # selection is a tuple with one member
     
 def remove_last_task():
     tasks.pop()
@@ -79,6 +85,9 @@ task_list = tk.Listbox(window)
 # Create a button for clearing all tasks
 clear_button = tk.Button(window, text="Clear Tasks", command=clear_tasks)
 
+#Create a button for clearning selected task in listbox
+delete_selection_button=tk.Button(window, text="Remove selection", command=delete_selection)
+
 # Create a button for clearing last task
 remove_last_task_button = tk.Button(window, text="Remove Last", command=remove_last_task)
 
@@ -91,7 +100,8 @@ task_entry.pack()
 add_button.pack()
 task_list.pack()
 clear_button.pack()
-remove_last_task_button.pack()#added button to remove last task
+delete_selection_button.pack()#Elizabeth note: added button to remove selected task
+remove_last_task_button.pack()#Elizabeth note: added button to remove last task
 start_button.pack()
 
 
