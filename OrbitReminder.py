@@ -35,7 +35,7 @@ def remind():
 #enter to commit task to listbox
 
 def say_words(task):
-    #runAndWait() not fully working as it would get stuck on second thing said, used https://stackoverflow.com/questions/56032027/pyttsx3-runandwait-method-gets-stuck
+    #EDrunAndWait() not fully working as it would get stuck on second thing said, used https://stackoverflow.com/questions/56032027/pyttsx3-runandwait-method-gets-stuck
     engine = pyttsx3.init()
     engine.say(task)
     engine.runAndWait()
