@@ -29,9 +29,8 @@ Keep any existing copyright, patent, or attribution notices.
 
 [ ]Option to add countdown alarms 
 
-https://github.com/Jamandalley/AlarmApp
-
-#Elizabeth notes - Parts of the code are functional, but its trajectory doesn’t quite align with the Orbit watch’s path. It’s buggy. It overall does not  deliver on audio notifications and I couldn’t get the font customization to work either.  It does however count down briefly before it freezes.  
+#https://github.com/Jamandalley/AlarmApp
+#Elizabeth notes - Parts of the code are functional, but its trajectory doesn’t quite align with the Orbit watch’s path. It’s buggy. It overall does not  deliver on audio notifications and I couldn’t get the font customization to work either.  It does however count down briefly before it freezes. 
 
 [ ]Schedule for future dates 
 
@@ -43,13 +42,15 @@ Morning routine
 
 Individual tasks 
 #https://github.com/cyph3rryx/Python-Reminder-Script
-#Elizabeth Notes: AI would get stuck on second task, updated the code with guidance from https://stackoverflow.com/questions/56032027/pyttsx3-runandwait-method-gets-stuck
-#Elizabeth Notes: Was unable to make changes to a task list once it was done or with accidental entry, added funtion to remove last item and added button between clear tasks and start reminder. This made the list more user friendly. Would like to further explore code to remove selected task.
+#Elizabeth Notes: text-to-speech would get stuck on second task, updated the code with guidance from https://stackoverflow.com/questions/56032027/pyttsx3-runandwait-method-gets-stuck
+#Elizabeth Notes: Was unable to make changes to a task list once it was done or with accidental task entry, added funtion to remove last item and added button and widget between clear tasks and start reminder for optimal flow. This made the list more user friendly. [X]Would like to further explore code to remove selected task in the listbox to make this more user friendly.
+#Elizabeth Notes: Was able to successfully remove selected item from within the list box, button and widget were also added. [X]Would want to have option to use enter key to commit a task into the listbox vs having to hoover mouse over the add task button to commit the task into listbox to make this more user friendly.
+#Elizabeth Notes: was able to bind enter key with multiple attempts/trouble shooting with guidance from https://stackoverflow.com/questions/16996432/how-do-i-bind-the-enter-key-to-a-function-in-tkinter.[] Would like to review more repositories/code to add button to iterrupt text-to-speech as needed.
 
 Time allotted for each task 
 #https://github.com/cyph3rryx/Python-Reminder-Script
+#Elizabeth Notes: currently allows interval reminders, was previously set at 3600sec, for the purpose of testing, it was reduced to 1 second.
 
-#Elizabeth Notes: currently allows interval reminders, was previously set at 3600sec, for the purpose of testing, it was reduced to 1 second. 
 Evening routine 
 
 Individual tasks 
@@ -76,12 +77,13 @@ No Snooze but will repeat alarm if not completed on the watch
 
 # Program timers for specific tasks 
 
-https://github.com/Aoumjahde/Advanced-To-Do-List-App-with-Python-and-Tkinter
-
-#Elizabeth - For the sake of our project, it seems to have too many windows pop up, creating to much visual clutter for our end user. However, it shouldn’t be discarded as it could help with the app development. One thing I really liked was the ability to edit a list while creating it, and I also appreciated the flexibility of being able to add multiple lists. 
-
 # Easy task selection list 
 
+#https://github.com/Aoumjahde/Advanced-To-Do-List-App-with-Python-and-Tkinter
+
+#Elizabeth - For the sake of our project, it seems to have too many windows pop up, creating to much visual clutter for our end user. However, it shouldn’t be discarded as it could help with the app development. One thing I really liked was the ability to edit a list while creating it, and I also appreciated the flexibility of being able to add multiple lists. 
+  [] Consider using parts of this code to adjust colors in OrbitReminder.py
+  
 #  Start timer  
 
 Programmable timer from the watch 
