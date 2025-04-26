@@ -55,7 +55,7 @@ def run_reminder():
 # Create the main window
 window = tk.Tk()
 window.configure(bg="#F0F8FF")  # Kayla -changed background color to Light calming blue
-window.title("Daily Task Reminder")
+window.title("Orbit Watch - ADHD Task Manager")  # Kayla - changed title to Orbit Watch
 
 # Create a function to add a new task to the list
 def add_task():
@@ -189,7 +189,7 @@ def motivate():
     engine.say(message)
     engine.runAndWait()
 # Create a button for motivation
-motivate_button = tk.Button(window, text="Motivate Me!", command=motivate, bg="#FFD700", font=("Helvetica", 12))
+motivate_button = tk.Button(window, text="Motivate Me!", command=motivate, bg="#90EE90", font=("Helvetica", 12, "bold italic")) # Kayla - changed button color, bold and italic font
 motivate_button.pack()
 
 
