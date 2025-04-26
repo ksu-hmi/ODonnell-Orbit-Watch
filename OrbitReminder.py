@@ -75,35 +75,12 @@ def remove_last_task():
 #Tanya: Adding an alarm clock feature, merged from alarm-GUI.py
 #Alarm clock function
 
+#added impor for Messagebox
+from tkinter import messagebox
+
 def run_alarm_clock():
     alarm_window = tk.Toplevel(window)
     alarm_window.title("Alarm Clock")
-    
-    def SubmitButton():
-        AlarmTime = entry1.get()
-        Message1()
-        CurrentTime = time.strftime("%H:%M")
-        print("The alarm time is: {}".format(AlarmTime))
-        
-        def check_alarm():
-            CurrentTime = time.strftime("%H:%M")
-            if AlarmTime == CurrentTime:
-                print("Now Alarm Music Playing")
-                try:
-                    os.system("start alarm-music.mp3")
-                except Exception as e:
-                    print("Could not play music:", e)
-                label2.config(text="Alarm music playing...")
-                messagebox.showinfo(title='Alarm Message', message=entry2.get())
-            else:
-                alarm_window.after(1000, check_alarm)
-        
-        check_alarm()
-
-    def Message1():
-        AlarmTimeLabel = entry1.get()
-        label2.config(text="The alarm is counting...")
-        messagebox.showinfo(title='Alarm Clock', message='Alarm will ring at {}'.format(AlarmTimeLabel))
     
     frame1 = tk.Frame(alarm_window)
     frame1.pack(padx=10, pady=10)
@@ -121,11 +98,39 @@ def run_alarm_clock():
     entry2 = tk.Entry(frame1, width=30)
     entry2.pack()
 
-    button1 = tk.Button(frame1, text="Set Alarm", command=SubmitButton)
-    button1.pack(pady=5)
-
     label2 = tk.Label(frame1)
     label2.pack()
+
+    def SubmitButton():
+        AlarmTime = entry1.get()
+        Message1()
+        print("The alarm time is: {}".format(AlarmTime))
+        
+        def check_alarm():
+            if not alarm_window.winfo_exists():
+                return
+
+            CurrentTime = time.strftime("%H:%M")
+            if AlarmTime == CurrentTime:
+                print("Now Alarm Music Playing")
+                try:
+                    os.system("start alarm-music.mp3")
+                except Exception as e:
+                    print("Could not play music:", e)
+                label2.config(text="Alarm music playing...")
+                tk.messagebox.showinfo(title='Alarm Message', message=entry2.get())
+            else:
+                alarm_window.after(1000, check_alarm)
+        
+        check_alarm()
+
+    def Message1():
+        AlarmTimeLabel = entry1.get()
+        label2.config(text="The alarm is counting...")
+        tk.messagebox.showinfo(title='Alarm Clock', message='Alarm will ring at {}'.format(AlarmTimeLabel))
+
+    button1 = tk.Button(frame1, text="Set Alarm", command=SubmitButton)
+    button1.pack(pady=5)
 
     
 # Create a label and entry field for adding new tasks
