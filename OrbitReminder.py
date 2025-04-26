@@ -12,6 +12,7 @@ engine = pyttsx3.init()
 
 # Create a list to store the daily tasks
 tasks = ["wake", "eat", "work", "eat","sleep"]
+# test
 
 # Set the interval for the reminder (in seconds)
 interval = 1  
@@ -53,6 +54,7 @@ def run_reminder():
 
 # Create the main window
 window = tk.Tk()
+window.configure(bg="#F0F8FF")  # Kayla -changed background color to Light calming blue
 window.title("Daily Task Reminder")
 
 # Create a function to add a new task to the list
@@ -173,6 +175,23 @@ delete_selection_button.pack()#Elizabeth note: added button to remove selected t
 remove_last_task_button.pack()#Elizabeth note: added button to remove last task
 start_button.pack()
 open_alarm_button.pack()
+
+#Kayla - add a "Motivate Me! Button"
+def motivate():
+    phrases = [
+        "You're doing great!",
+        "One step at a time!",
+        "Keep it up, champion!",
+        "You're making real progress!"
+    ]
+    message = random.choice(phrases)
+    engine = pyttsx3.init()
+    engine.say(message)
+    engine.runAndWait()
+# Create a button for motivation
+motivate_button = tk.Button(window, text="Motivate Me!", command=motivate, bg="#FFD700", font=("Helvetica", 12))
+motivate_button.pack()
+
 
 
 #initialize listbox with tasks
