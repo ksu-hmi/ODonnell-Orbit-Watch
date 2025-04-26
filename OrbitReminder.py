@@ -2,8 +2,10 @@ import tkinter as tk
 import pyttsx3
 import datetime
 import time
-#added import for Messagebox
+#Tanuya: added import for Messagebox
 from tkinter import messagebox
+from playsound import playsound
+#Tanya: added import for playsound to play alarm sound
 
 # Set up the text-to-speech engine
 engine = pyttsx3.init()
@@ -84,7 +86,6 @@ def speak_text(text):
 #Tanya: Adding an alarm clock feature, merged from alarm-GUI.py
 #Alarm clock function
 #tweaked alarm so that it does not reopen over and over again after hitting the close button
-
 def run_alarm_clock():
     alarm_window = tk.Toplevel(window)
     alarm_window.title("Alarm Clock")
@@ -116,24 +117,25 @@ def run_alarm_clock():
         if alarm_time == current_time:
             print("Now Alarm Music Playing")
             try:
-                os.system("start alarm-music.mp3")  # This tries to play music if available
+                playsound('super_low_tone.wav')  # Play your soft tone here
             except Exception as e:
-                print("Could not play music:", e)
+                print("Could not play sound:", e)
             label2.config(text="Alarm music playing...")
             message = entry2.get()
             messagebox.showinfo(title='Alarm Message', message=message)
             speak_text(message)
         else:
-            alarm_window.after(1000, lambda: check_alarm(alarm_time))  # Check again in 1 second
+            alarm_window.after(1000, lambda: check_alarm(alarm_time))  # Keep checking every second
 
     def SubmitButton():
         alarm_time = entry1.get()
         label2.config(text="The alarm is counting...")
-        messagebox.showinfo(title='Alarm Clock', message='Alarm will ring at {}'.format(alarm_time))
-        check_alarm(alarm_time)  # Start checking
+        messagebox.showinfo(title='Alarm Clock', message=f'Alarm will ring at {alarm_time}')
+        check_alarm(alarm_time)  # Start checking the alarm time
 
     button1 = tk.Button(frame1, text="Set Alarm", command=SubmitButton)
     button1.pack(pady=5)
+
 
     
 # Create a label and entry field for adding new tasks
