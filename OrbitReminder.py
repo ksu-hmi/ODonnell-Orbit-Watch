@@ -55,7 +55,7 @@ def run_reminder():
 # Create the main window
 window = tk.Tk()
 window.configure(bg="#F0F8FF")  # Kayla -changed background color to Light calming blue
-window.title("Orbit Watch - ADHD Task Manager")  # Kayla - changed title to Orbit Watch
+window.title("Orbit Watch - ADHD Task Manager")  # Kayla - changed title to Orbit Watch - 5th commit was included in last commit, not listed separtely
 
 # Create a function to add a new task to the list
 def add_task():
