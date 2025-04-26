@@ -71,6 +71,62 @@ def delete_selection():
 def remove_last_task():
     tasks.pop()
     task_list.delete(tk.END, tk.END)
+
+#Tanya: Adding an alarm clock feature, merged from alarm-GUI.py
+#Alarm clock function
+
+def run_alarm_clock():
+    alarm_window = tk.Toplevel(window)
+    alarm_window.title("Alarm Clock")
+    
+    def SubmitButton():
+        AlarmTime = entry1.get()
+        Message1()
+        CurrentTime = time.strftime("%H:%M")
+        print("The alarm time is: {}".format(AlarmTime))
+        
+        def check_alarm():
+            CurrentTime = time.strftime("%H:%M")
+            if AlarmTime == CurrentTime:
+                print("Now Alarm Music Playing")
+                try:
+                    os.system("start alarm-music.mp3")
+                except Exception as e:
+                    print("Could not play music:", e)
+                label2.config(text="Alarm music playing...")
+                messagebox.showinfo(title='Alarm Message', message=entry2.get())
+            else:
+                alarm_window.after(1000, check_alarm)
+        
+        check_alarm()
+
+    def Message1():
+        AlarmTimeLabel = entry1.get()
+        label2.config(text="The alarm is counting...")
+        messagebox.showinfo(title='Alarm Clock', message='Alarm will ring at {}'.format(AlarmTimeLabel))
+    
+    frame1 = tk.Frame(alarm_window)
+    frame1.pack(padx=10, pady=10)
+
+    label1 = tk.Label(frame1, text="Enter the Alarm Time (HH:MM):")
+    label1.pack()
+
+    entry1 = tk.Entry(frame1, width=30)
+    entry1.pack()
+    entry1.insert(0, "example - 13:15")
+
+    labelAlarmMessage = tk.Label(frame1, text="Alarm Message:")
+    labelAlarmMessage.pack()
+
+    entry2 = tk.Entry(frame1, width=30)
+    entry2.pack()
+
+    button1 = tk.Button(frame1, text="Set Alarm", command=SubmitButton)
+    button1.pack(pady=5)
+
+    label2 = tk.Label(frame1)
+    label2.pack()
+
     
 # Create a label and entry field for adding new tasks
 task_label = tk.Label(window, text="Enter a new task:")
@@ -94,6 +150,9 @@ remove_last_task_button = tk.Button(window, text="Remove Last", command=remove_l
 # Create a button for starting the reminder loop
 start_button = tk.Button(window, text="Start Reminder", command=run_reminder)
 
+#Tanya: Create a button for starting the alarm clock
+open_alarm_button = tk.Button(window, text="Start Alarm Clock", command=run_alarm_clock)
+
 # Pack the widgets into the window
 task_label.pack()
 task_entry.pack()
@@ -103,6 +162,7 @@ clear_button.pack()
 delete_selection_button.pack()#Elizabeth note: added button to remove selected task
 remove_last_task_button.pack()#Elizabeth note: added button to remove last task
 start_button.pack()
+open_alarm_button.pack()
 
 
 #initialize listbox with tasks
