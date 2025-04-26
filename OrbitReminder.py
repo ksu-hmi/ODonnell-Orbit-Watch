@@ -2,6 +2,8 @@ import tkinter as tk
 import pyttsx3
 import datetime
 import time
+#added import for Messagebox
+from tkinter import messagebox
 
 # Set up the text-to-speech engine
 engine = pyttsx3.init()
@@ -72,11 +74,16 @@ def remove_last_task():
     tasks.pop()
     task_list.delete(tk.END, tk.END)
 
+#Tanya: Adding speak to text function for the alarm clock
+
+def speak_text(text):
+    engine.say(text)
+    engine.runAndWait()
+
+
 #Tanya: Adding an alarm clock feature, merged from alarm-GUI.py
 #Alarm clock function
-
-#added impor for Messagebox
-from tkinter import messagebox
+#tweaked alarm so that it does not reopen over and over again after hitting the close button
 
 def run_alarm_clock():
     alarm_window = tk.Toplevel(window)
@@ -101,33 +108,29 @@ def run_alarm_clock():
     label2 = tk.Label(frame1)
     label2.pack()
 
+    def check_alarm(alarm_time):
+        if not alarm_window.winfo_exists():
+            return  # Stop checking if window closed
+
+        current_time = time.strftime("%H:%M")
+        if alarm_time == current_time:
+            print("Now Alarm Music Playing")
+            try:
+                os.system("start alarm-music.mp3")  # This tries to play music if available
+            except Exception as e:
+                print("Could not play music:", e)
+            label2.config(text="Alarm music playing...")
+            message = entry2.get()
+            messagebox.showinfo(title='Alarm Message', message=message)
+            speak_text(message)
+        else:
+            alarm_window.after(1000, lambda: check_alarm(alarm_time))  # Check again in 1 second
+
     def SubmitButton():
-        AlarmTime = entry1.get()
-        Message1()
-        print("The alarm time is: {}".format(AlarmTime))
-        
-        def check_alarm():
-            if not alarm_window.winfo_exists():
-                return
-
-            CurrentTime = time.strftime("%H:%M")
-            if AlarmTime == CurrentTime:
-                print("Now Alarm Music Playing")
-                try:
-                    os.system("start alarm-music.mp3")
-                except Exception as e:
-                    print("Could not play music:", e)
-                label2.config(text="Alarm music playing...")
-                tk.messagebox.showinfo(title='Alarm Message', message=entry2.get())
-            else:
-                alarm_window.after(1000, check_alarm)
-        
-        check_alarm()
-
-    def Message1():
-        AlarmTimeLabel = entry1.get()
+        alarm_time = entry1.get()
         label2.config(text="The alarm is counting...")
-        tk.messagebox.showinfo(title='Alarm Clock', message='Alarm will ring at {}'.format(AlarmTimeLabel))
+        messagebox.showinfo(title='Alarm Clock', message='Alarm will ring at {}'.format(alarm_time))
+        check_alarm(alarm_time)  # Start checking
 
     button1 = tk.Button(frame1, text="Set Alarm", command=SubmitButton)
     button1.pack(pady=5)
