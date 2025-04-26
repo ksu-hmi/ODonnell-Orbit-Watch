@@ -96,20 +96,20 @@ def run_alarm_clock():
     frame1 = tk.Frame(alarm_window)
     frame1.pack(padx=10, pady=10)
 
-    label1 = tk.Label(frame1, text="Enter the Alarm Time (HH:MM):")
+    label1 = tk.Label(frame1, text="Enter the Alarm Time (HH:MM):", font=("Helvetica", 12))  # Kayla - changed font
     label1.pack()
 
     entry1 = tk.Entry(frame1, width=30)
     entry1.pack()
     entry1.insert(0, "example - 13:15")
 
-    labelAlarmMessage = tk.Label(frame1, text="Alarm Message:")
+    labelAlarmMessage = tk.Label(frame1, text="Alarm Message:",font=("Helvetica", 12))  # Kayla - changed font
     labelAlarmMessage.pack()
 
     entry2 = tk.Entry(frame1, width=30)
     entry2.pack()
 
-    label2 = tk.Label(frame1)
+    label2 = tk.Label(frame1, font=("Helvetica", 12))  # Kayla - changed font
     label2.pack()
 
     def check_alarm(alarm_time):
@@ -136,34 +136,34 @@ def run_alarm_clock():
         messagebox.showinfo(title='Alarm Clock', message='Alarm will ring at {}'.format(alarm_time))
         check_alarm(alarm_time)  # Start checking
 
-    button1 = tk.Button(frame1, text="Set Alarm", command=SubmitButton)
+    button1 = tk.Button(frame1, text="Set Alarm", command=SubmitButton, font=("Helvetica", 12))  # Kayla - changed font
     button1.pack(pady=5)
 
     
 # Create a label and entry field for adding new tasks
-task_label = tk.Label(window, text="Enter a new task:")
+task_label = tk.Label(window, text="Enter a new task:", font=("Helvetica", 12))  # Kayla - changed font
 task_entry = tk.Entry(window)
 
 # Create a button for adding tasks
-add_button = tk.Button(window, text="Add Task", command=add_task)
+add_button = tk.Button(window, text="Add Task", command=add_task, font=("Helvetica", 12))  # Kayla - changed font
 
 # Create a listbox for displaying the tasks
 task_list = tk.Listbox(window)
 
 # Create a button for clearing all tasks
-clear_button = tk.Button(window, text="Clear Tasks", command=clear_tasks)
+clear_button = tk.Button(window, text="Clear Tasks", command=clear_tasks, font=("Helvetica", 12))  # Kayla - changed font
 
 #Create a button for clearning selected task in listbox
-delete_selection_button=tk.Button(window, text="Remove selection", command=delete_selection)
+delete_selection_button=tk.Button(window, text="Remove selection", command=delete_selection, font=("Helvetica", 12))  # Kayla - changed font
 
 # Create a button for clearing last task
-remove_last_task_button = tk.Button(window, text="Remove Last", command=remove_last_task)
+remove_last_task_button = tk.Button(window, text="Remove Last", command=remove_last_task, font=("Helvetica", 12))  # Kayla - changed font
 
 # Create a button for starting the reminder loop
-start_button = tk.Button(window, text="Start Reminder", command=run_reminder)
+start_button = tk.Button(window, text="Start Reminder", command=run_reminder, font=("Helvetica", 12))  # Kayla - changed font
 
 #Tanya: Create a button for starting the alarm clock
-open_alarm_button = tk.Button(window, text="Start Alarm Clock", command=run_alarm_clock)
+open_alarm_button = tk.Button(window, text="Start Alarm Clock", command=run_alarm_clock, font=("Helvetica", 12))  # Kayla - changed font
 
 # Pack the widgets into the window
 task_label.pack()
