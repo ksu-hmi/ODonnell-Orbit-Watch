@@ -25,7 +25,9 @@ Keep any existing copyright, patent, or attribution notices.
 #https://github.com/ansh997/Simple-Alarm-Clock-Python
 #Tanya notes - This one works! And it comes with a jaunty little ditty. 
 
-[ ]Option to add alarms 
+[X]Option to add alarms
+#Created a new button to open an alarm clock function in another window
+#Merged an alarm clock function from another code
 
 [ ]Option to add countdown alarms 
 
