@@ -54,6 +54,7 @@ def run_reminder():
 
 # Create the main window
 window = tk.Tk()
+window.configure(bg="#F0F8FF")  # Kayla -changed background color to Light calming blue
 window.title("Daily Task Reminder")
 
 # Create a function to add a new task to the list
