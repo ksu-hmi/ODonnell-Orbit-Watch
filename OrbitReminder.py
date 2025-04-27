@@ -2,7 +2,7 @@ import tkinter as tk
 import pyttsx3
 import datetime
 import time
-import random
+
 #Tanuya: added import for Messagebox
 from tkinter import messagebox
 from playsound import playsound
