@@ -72,7 +72,8 @@ This document includes:
 
   We gratefully ackowledge:
   - https://github.com/ansh997/Simple-Alarm-Clock-Python
-  - *place holder*
+  - https://github.com/cyph3rryx/Python-Reminder-Script
+  - 
   - Kennesaw State University and the HMI 7540 course
 
   Unless otherwise stated, this project is not licensed for commercial distribution.
