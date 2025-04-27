@@ -71,7 +71,7 @@ This document includes:
   This is a work in progress, some components may not be fully functional. This is a project for KSU MSHMI Spring 2025.
 
   We gratefully ackowledge:
-  - *Chosen Repository*
+  - https://github.com/ansh997/Simple-Alarm-Clock-Python
   - *place holder*
   - Kennesaw State University and the HMI 7540 course
 
