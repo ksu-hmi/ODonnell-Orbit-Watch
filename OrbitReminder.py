@@ -50,18 +50,27 @@ def say_words(task):
 # Amanda: Added variable to track completed tasks
 completed_tasks = 0
 
-# Amanda: Marking the task as complete for positive reinforcement
+# Amanda: function to mark the task as complete for positive reinforcement
 def mark_task_complete():
     global completed_tasks
     selection = task_list.curselection()
     if selection:
-        task = task_list.get(selection)
+        index = selection[0]  # Amanda: Get the index of the selected task
+        task = task_list.get(index)  # Amanda: Get the task text
+
+        # Amanda: Update the completed task visually with a checkmark
+        completed_task = f"✔️ {task}"
+        task_list.delete(index)
+        task_list.insert(index, completed_task)
+
          # Amanda: Added to visually indicate task completion
-        task_list.itemconfig(selection, {'fg': 'gray'})
+        task_list.itemconfig(selection, {'fg': 'green'})  # Amanda: Change text color to green when task is completed
+        # Amanda: Increment completed task counter
         completed_tasks += 1
         # Amanda: Added to have the voice in the app to say the task is completed and the total number of tasks completed for the day
         message = f"Great job! You've completed {completed_tasks} task(s) today!"
         say_words(message)
+        # Amanda: Pop-up window to show a message box with the positive reinforcement message of number of completed tasks
         messagebox.showinfo("Task Completed", message)
 
 # Create a function to run the reminder at regular intervals
