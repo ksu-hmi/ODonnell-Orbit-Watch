@@ -36,9 +36,6 @@ def remind():
     say_words(greeting)
     for task in tasks:
       say_words(task)
-#maybe add interval in this loop?
-#or figure out how to remove selected
-#enter to commit task to listbox
 
 def say_words(task):
     #Elizabeth Notes: runAndWait() not fully working as it would get stuck on second thing said, used https://stackoverflow.com/questions/56032027/pyttsx3-runandwait-method-gets-stuck
@@ -99,7 +96,8 @@ window.configure(bg="#F0F8FF")  # Kayla -changed background color to Light calmi
 window.title("Orbit Watch - ADHD Task Manager")  # Kayla - changed title to Orbit Watch - 5th commit was included in last commit, not listed separtely
 
 # Create a function to add a new task to the list
-def add_task():
+#Elizabeth note: adjusting function to give option to use enter key to add task to listbox
+def add_task(event=None):
     task = task_entry.get()
     tasks.append(task)
     task_list.insert(tk.END, task)
@@ -110,12 +108,13 @@ def clear_tasks():
     task_list.delete(0, tk.END)
 
 def delete_selection():
-    #delete from Listbox
+    #ElizabethNotes: delete from Listbox
     selection = task_list.curselection()
     task_list.delete(selection)
     tasks.pop(selection[0])  # selection is a tuple with one member
     
 def remove_last_task():
+    #ElizabethNotes: remove last task in listbox 
     tasks.pop()
     task_list.delete(tk.END, tk.END)
 
@@ -191,7 +190,7 @@ add_button = tk.Button(window, text="Add Task", command=add_task, font=("Helveti
 # Create a listbox for displaying the tasks
 task_list = tk.Listbox(window)
 
-# Create a button for clearing all tasks
+#Create a button for clearing all tasks
 clear_button = tk.Button(window, text="Clear Tasks", command=clear_tasks, font=("Helvetica", 12))  # Kayla - changed font
 
 #Create a button for clearning selected task in listbox
@@ -208,6 +207,9 @@ open_alarm_button = tk.Button(window, text="Start Alarm Clock", command=run_alar
 
 # Amanda: Create a button for marking task as complete
 mark_complete_button = tk.Button(window, text="Mark Task Complete", command=mark_task_complete, font=("Helvetica", 12))
+
+# Elizabeth notes: binding code 
+window.bind('<Return>', add_task)
 
 # Pack the widgets into the window
 task_label.pack()
