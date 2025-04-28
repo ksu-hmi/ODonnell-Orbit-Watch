@@ -46,7 +46,17 @@ def say_words(task):
     engine.say(task)
     engine.runAndWait()
     del(engine) 
-        
+
+# Amanda: Added variable to track completed tasks
+completed_tasks = 0
+
+# Amanda: Marking the task as complete for positive reinforcement
+def mark_task_complete():
+    global completed_tasks
+    selection = task_list.curselection()
+    if selection:
+        task = task_list.get(selection)
+
 # Create a function to run the reminder at regular intervals
 def run_reminder():
     #while True:
