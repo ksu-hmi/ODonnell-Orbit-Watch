@@ -56,6 +56,13 @@ def mark_task_complete():
     selection = task_list.curselection()
     if selection:
         task = task_list.get(selection)
+         # Amanda: Added to visually indicate task completion
+        task_list.itemconfig(selection, {'fg': 'gray'})
+        completed_tasks += 1
+        # Amanda: Added to have the voice in the app to say the task is completed and the total number of tasks completed for the day
+        message = f"Great job! You've completed {completed_tasks} task(s) today!"
+        say_words(message)
+        messagebox.showinfo("Task Completed", message)
 
 # Create a function to run the reminder at regular intervals
 def run_reminder():
