@@ -58,6 +58,11 @@ def mark_task_complete():
         index = selection[0]  # Amanda: Get the index of the selected task
         task = task_list.get(index)  # Amanda: Get the task text
 
+         # Check if task is already completed
+        if task.startswith("✔️"):
+            messagebox.showinfo("Already Completed", "This task has already been completed!")
+            return
+
         # Amanda: Update the completed task visually with a checkmark
         completed_task = f"✔️ {task}"
         task_list.delete(index)
