@@ -87,6 +87,12 @@ No Snooze but will repeat alarm if not completed on the watch
 
 # Easy task selection list 
 
+[ ] User should be able to mark tasks complete for positive reinforcement # Amanda Sprint 2 contribution
+
+[  ] User should be able to track total tasks completed that day for positive reinforcement # Amanda Sprint 2 contribution
+
+[  ] Audio messages for users - add complete tasks and total tasks, etc. # Amanda Sprint 2 contribution
+
 #https://github.com/Aoumjahde/Advanced-To-Do-List-App-with-Python-and-Tkinter
 
 #Elizabeth - For the sake of our project, it seems to have too many windows pop up, creating to much visual clutter for our end user. However, it shouldn’t be discarded as it could help with the app development. One thing I really liked was the ability to edit a list while creating it, and I also appreciated the flexibility of being able to add multiple lists. 
@@ -122,3 +128,4 @@ Needs bluetooth capability
 User Interface to display tasks and alerts, show timer countdown # Amanda's comments https://github.com/sbartoszuk/A-to-D
 
 #Amanda's Notes: It is a GUI built with PyQt5 which could require additional effort to ensure compatibility across platforms, especially when adapting it for the smartwatch integration. It appears to have minimal documentation and lacks a significant user community. This can make it challenging to understand the codebase and troubleshoot issues without external assistance. 
+#Amanda's Sprint 2 Update: This is more complex than we have time to finish in this project with many files to integrate. We have pivoted on a scope change to leverage the UI we already have working in the task manager and improve the functionality in the pop up window with ways to complete tasks, track completed number of tasks, add additional buttons, change colors, etc.
