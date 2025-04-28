@@ -12,7 +12,7 @@ from playsound import playsound
 engine = pyttsx3.init()
 
 # Create a list to store the daily tasks
-tasks = ["wake", "eat", "work", "eat","sleep"]
+tasks = ["wake", "eat", "work", "eat", "exercise","sleep"]
 # test
 
 # Set the interval for the reminder (in seconds)
