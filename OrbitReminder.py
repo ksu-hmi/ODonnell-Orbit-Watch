@@ -71,7 +71,7 @@ def mark_task_complete():
         messages = [
             f"Great job! You've completed {completed_tasks} task{'s' if completed_tasks > 1 else ''} today!",
             f"Congratulations! {completed_tasks} task{'s' if completed_tasks > 1 else ''} done!",
-            f"Awesome work! Keep going, {completed_tasks} completed!",
+            f"Awesome work! Keep going, {completed_tasks} task completed!",
             f"You're on fire! {completed_tasks} tasks finished!"
         ]
         message = random.choice(messages)
@@ -79,6 +79,8 @@ def mark_task_complete():
         say_words(message)
         # Amanda: Pop-up window to show a message box with the positive reinforcement message of number of completed tasks
         messagebox.showinfo("Task Completed", message)
+    else:
+        messagebox.showwarning("No Selection", "Please select a task to mark as complete.")
 
 # Create a function to run the reminder at regular intervals
 def run_reminder():
