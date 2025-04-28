@@ -67,8 +67,15 @@ def mark_task_complete():
         task_list.itemconfig(selection, {'fg': 'green'})  # Amanda: Change text color to green when task is completed
         # Amanda: Increment completed task counter
         completed_tasks += 1
-        # Amanda: Added to have the voice in the app to say the task is completed and the total number of tasks completed for the day
-        message = f"Great job! You've completed {completed_tasks} task(s) today!"
+        # Amanda: Added to have the voice in the app to say the task is completed and the total number of tasks completed for the day. Multiple messages are randomly selected from the list for positive reinforcement.
+        messages = [
+            f"Great job! You've completed {completed_tasks} task{'s' if completed_tasks > 1 else ''} today!",
+            f"Congratulations! {completed_tasks} task{'s' if completed_tasks > 1 else ''} done!",
+            f"Awesome work! Keep going, {completed_tasks} completed!",
+            f"You're on fire! {completed_tasks} tasks finished!"
+        ]
+        message = random.choice(messages)
+        # Amanda: Audio says the message out loud to the user for positive reinforcement
         say_words(message)
         # Amanda: Pop-up window to show a message box with the positive reinforcement message of number of completed tasks
         messagebox.showinfo("Task Completed", message)
