@@ -3,7 +3,7 @@ import pyttsx3
 import datetime
 import time
 import random
-#Tanuya: added import for Messagebox
+#Tanya: added import for Messagebox
 from tkinter import messagebox
 from playsound import playsound
 #Tanya: added import for playsound to play alarm sound
