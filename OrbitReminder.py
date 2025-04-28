@@ -183,6 +183,9 @@ start_button = tk.Button(window, text="Start Reminder", command=run_reminder, fo
 #Tanya: Create a button for starting the alarm clock
 open_alarm_button = tk.Button(window, text="Start Alarm Clock", command=run_alarm_clock, font=("Helvetica", 12))  # Kayla - changed font
 
+# Amanda: Create a button for marking task as complete
+mark_complete_button = tk.Button(window, text="Mark Task Complete", command=mark_task_complete, font=("Helvetica", 12))
+
 # Pack the widgets into the window
 task_label.pack()
 task_entry.pack()
@@ -191,6 +194,7 @@ task_list.pack()
 clear_button.pack()
 delete_selection_button.pack()#Elizabeth note: added button to remove selected task
 remove_last_task_button.pack()#Elizabeth note: added button to remove last task
+mark_complete_button.pack()  # Amanda: Added to pack the button for marking task as complete
 start_button.pack()
 open_alarm_button.pack()
 
