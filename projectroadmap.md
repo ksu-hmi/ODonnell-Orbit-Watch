@@ -59,12 +59,14 @@ Individual tasks
 #https://github.com/cyph3rryx/Python-Reminder-Script
 
 #Kayla Notes: Start Reminder is an audio message " Here are your tasks for the Day". A good start for a Daily Task Function. Currently unable to add tasks within the program, but we might need to add a "get user input" modification or an append option. 
-# Kayla Contributions (Sprint 2):
+
+Kayla Contributions (Sprint 2):
 - [x] Added "Motivate Me" button with random affirmations
 - [x] Updated background color for accessibility
 - [x] Updated font styles across labels and buttons (Helvetica)
 - [x] Styled "Motivate Me" button for emphasis
 - [x] Updated window title with Orbit Watch branding
+- [x] Fixed missing "Random Import" for Motivate Me button 
 
 Time allotted for each task 
 
