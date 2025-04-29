@@ -59,12 +59,14 @@ Individual tasks
 #https://github.com/cyph3rryx/Python-Reminder-Script
 
 #Kayla Notes: Start Reminder is an audio message " Here are your tasks for the Day". A good start for a Daily Task Function. Currently unable to add tasks within the program, but we might need to add a "get user input" modification or an append option. 
-# Kayla Contributions (Sprint 2):
+
+Kayla Contributions (Sprint 2):
 - [x] Added "Motivate Me" button with random affirmations
 - [x] Updated background color for accessibility
 - [x] Updated font styles across labels and buttons (Helvetica)
 - [x] Styled "Motivate Me" button for emphasis
 - [x] Updated window title with Orbit Watch branding
+- [x] Fixed missing "Random Import" for Motivate Me button 
 
 Time allotted for each task 
 
@@ -78,6 +80,7 @@ No Snooze but will repeat alarm if not completed on the watch
 
 #https://github.com/glyph/Pomodouroboros #Amanda's Notes: This is a continuous Pomodoro timer that helps with time blindness.
 #Amanda's Notes: Currently only runs on Mac, does not run on Windows or Linux but future plans to do so but no timeline. Has a rough implementation, it may not be suitable for end-users without further development. The codebase might require significant refinement and testing.
+#Amanda's Sprint 2 Update: This is more complex than we have time to finish in this project with many files to integrate. We have pivoted on a scope change to leverage the UI we already have working in the task manager and improve the functionality in the pop up window with ways to complete tasks, track completed number of tasks, add additional buttons, change colors, etc.
 
 [ ]From App 
 
@@ -87,11 +90,21 @@ No Snooze but will repeat alarm if not completed on the watch
 
 # Easy task selection list 
 
-[ ] User should be able to mark tasks complete for positive reinforcement # Amanda Sprint 2 contribution
+# Amanda's Sprint 2 Contributions:
+[X] User should be able to mark tasks complete for positive reinforcement - added button, checkmark, and text turns green - # Amanda's Sprint 2 contribution
+[X] User should be able to track total tasks completed that day for positive reinforcement - added variable completed_tasks - # Amanda's Sprint 2 contribution
+[X] Audio message when task is completed - added 4 messages that are selected randomly for positive reinforcement when a task is completed # Amanda's Sprint 2 contribution
+[X] Audio message when task is completed to state the total number of tasks completed - # Amanda's Sprint 2 contribution
+[X] Added 'Mark Task Complete' button and packed the newly added button in the UI # Amanda's Sprint 2 contribution
+[X] Added pop up window to tell the user a task has been completed with positive message and how many tasks have been completed - # Amanda's Sprint 2 contribution
+[X] Added enhancement to check if the task is already completed, the pop-up window will tell the user that task is already complete. This enhancement avoids the user being allowed to mark a task complete more than once. - Amanda's Sprint 2 contribution
+[X] Added 'exercise' to the daily default task list - # Amanda's Sprint 2 contribution
 
-[  ] User should be able to track total tasks completed that day for positive reinforcement # Amanda Sprint 2 contribution
+[ ] Progress Bar to visually show progress to user - # Amanda's Sprint 3 contribution
 
-[  ] Audio messages for users - add complete tasks and total tasks, etc. # Amanda Sprint 2 contribution
+[ ] Daily Reset button so completed tasks are unmarked and total tasks completed counter is reset to zero - # Amanda's Sprint 3 contribution
+
+[ ] Celebration emoji or confetti when user completes all tasks for the day - # Amanda's Sprint 3 contribution
 
 #https://github.com/Aoumjahde/Advanced-To-Do-List-App-with-Python-and-Tkinter
 
