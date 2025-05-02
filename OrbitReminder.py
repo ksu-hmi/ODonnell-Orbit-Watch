@@ -91,8 +91,28 @@ def mark_task_complete():
         say_words(message)
         # Amanda: Pop-up window to show a message box with the positive reinforcement message of number of completed tasks
         messagebox.showinfo("Task Completed", message)
+
+        # Amanda: If all tasks are completed (all start with ✔️), trigger celebration
+        all_completed = True
+        for i in range(task_list.size()):
+            if not task_list.get(i).startswith("✔️"):
+                all_completed = False
+                break
+
+        if all_completed and task_list.size() > 0:
+            celebrate_confetti()
     else:
         messagebox.showwarning("No Selection", "Please select a task to mark as complete.")
+
+# Amanda: Confetti Animation (fun reward when ALL tasks completed)
+def celebrate_confetti():
+    confetti_window = tk.Toplevel(window)
+    confetti_window.title("🎉 Celebration!")
+    confetti_window.geometry("300x200")
+    confetti_window.configure(bg="white")
+
+    confetti_label = tk.Label(confetti_window, text="🎉🎊🎉 YOU DID IT! 🎉🎊🎉", font=("Helvetica", 16), bg="white", fg="green")
+    confetti_label.pack(expand=True)
 
 # Create a function to run the reminder at regular intervals
 def run_reminder():
