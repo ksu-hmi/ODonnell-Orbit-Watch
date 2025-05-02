@@ -100,11 +100,11 @@ No Snooze but will repeat alarm if not completed on the watch
 [X] Added enhancement to check if the task is already completed, the pop-up window will tell the user that task is already complete. This enhancement avoids the user being allowed to mark a task complete more than once. - Amanda's Sprint 2 contribution
 [X] Added 'exercise' to the daily default task list - # Amanda's Sprint 2 contribution
 
-[ ] Progress Bar to visually show progress to user - # Amanda's Sprint 3 contribution
+[x] Progress Bar to visually show progress to user - # Amanda's Sprint 3 contribution - Completed
 
-[ ] Daily Reset button so completed tasks are unmarked and total tasks completed counter is reset to zero - # Amanda's Sprint 3 contribution
+[x] Daily Reset button so completed tasks are unmarked and total tasks completed counter is reset to zero - # Amanda's Sprint 3 contribution - Skipped because Elizabeth already created a clear/ reset button. 
 
-[ ] Celebration emoji or confetti when user completes all tasks for the day - # Amanda's Sprint 3 contribution
+[x] Celebration emoji or confetti when user completes all tasks for the day - # Amanda's Sprint 3 contribution - Completed
 
 #https://github.com/Aoumjahde/Advanced-To-Do-List-App-with-Python-and-Tkinter
 
