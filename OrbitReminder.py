@@ -2,11 +2,13 @@ import tkinter as tk
 import pyttsx3
 import datetime
 import time
-import random
+import random # We needed to add this to support Kayla's motivational phrases, randomization
 #Tanya: added import for Messagebox
 from tkinter import messagebox
 from playsound import playsound
 #Tanya: added import for playsound to play alarm sound
+# Amanda: added to create task progress bar (show progress visually)
+from tkinter import ttk
 
 # Set up the text-to-speech engine
 engine = pyttsx3.init()
@@ -69,6 +71,14 @@ def mark_task_complete():
         task_list.itemconfig(selection, {'fg': 'green'})  # Amanda: Change text color to green when task is completed
         # Amanda: Increment completed task counter
         completed_tasks += 1
+
+         # Amanda: Update the progress bar to show the percentage of tasks completed
+        total_tasks = task_list.size()
+        if total_tasks > 0:
+            progress["value"] = (completed_tasks / total_tasks) * 100
+        else:
+            progress["value"] = 0
+
         # Amanda: Added to have the voice in the app to say the task is completed and the total number of tasks completed for the day. Multiple messages are randomly selected from the list for positive reinforcement.
         messages = [
             f"Great job! You've completed {completed_tasks} task{'s' if completed_tasks > 1 else ''} today!",
@@ -179,7 +189,6 @@ def run_alarm_clock():
     button1.pack(pady=5)
 
 
-    
 # Create a label and entry field for adding new tasks
 task_label = tk.Label(window, text="Enter a new task:", font=("Helvetica", 12))  # Kayla - changed font
 task_entry = tk.Entry(window)
@@ -207,6 +216,10 @@ open_alarm_button = tk.Button(window, text="Start Alarm Clock", command=run_alar
 
 # Amanda: Create a button for marking task as complete
 mark_complete_button = tk.Button(window, text="Mark Task Complete", command=mark_task_complete, font=("Helvetica", 12))
+
+# Amanda: Create a Progress Bar widget
+progress = ttk.Progressbar(window, orient="horizontal", length=300, mode="determinate")
+progress.pack(pady=10)
 
 # Elizabeth notes: binding code 
 window.bind('<Return>', add_task)
